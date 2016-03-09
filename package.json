@@ -22,7 +22,8 @@
     "webpack": "1.12.14"
   },
   "name": "connect",
-  "description": "Connect: An Ionic project",
+  "description": "Connect is a mobile appplication to connect members of the public with first responders or relief entities in their area",
+  "version": "1.0.0",
   "cordovaPlugins": [],
   "cordovaPlatforms": [
     "ios",
