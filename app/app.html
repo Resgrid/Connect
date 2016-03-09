@@ -1,0 +1,39 @@
+<ion-menu [content]="content" side="right">
+  <ion-content>
+    <h3>In Apps</h3>
+    <p>Expand your collections</p>
+    <div class="list">
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-search"></i>
+            <h2>Job search</h2>
+            <p>Find a job you love</p>
+        </a>
+          
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-chatbox-working"></i>
+            <h2>Groups</h2>
+            <p>Join the conversation</p>
+        </a>
+
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-ios-pulse-strong"></i>
+            <h2>Pulse</h2>
+            <p>Get daily business news</p>
+        </a>
+          
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-ios-albums"></i>
+            <h2>Slideshare</h2>
+            <p>Master new topics</p>
+        </a>          
+    </div>
+  </ion-content>
+
+</ion-menu>
+
+<!--
+    The views will be rendered in the <ion-nav-view> directive below
+    Templates are in the /templates folder (but you could also
+    have templates inline in this html file if you'd like).
+-->
+<ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>

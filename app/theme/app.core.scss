@@ -1,0 +1,454 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+//@import "../pages/hello-ionic/hello-ionic";
+//@import "../pages/item-details/item-details";
+
+/* Sidemenu */
+.menu-open .menu-content.menu-animated {
+  transform: translate3d(-225px, 0px, 0px) scale(.8) !important;
+  // border-radius: 4px
+}
+
+.ion-side-menus {
+  background: #222629 !important;
+}
+
+.menu.menu-right {
+  background-color: transparent;
+  padding: 80px 16px 80px 32px;
+  color: #fff;
+}
+
+.menu.menu-right > .item {
+    background-color: transparent;
+    border: none;
+}
+
+.menu.menu-right > .item > h2 {
+    color: #fff;
+}
+ 
+.menu.menu-right > .item > img {
+    border-radius: 0;
+}
+
+.menu.menu-right > .item > h3 {
+    font-weight: 200;
+    color: #fff;
+}
+
+
+/* Tabs */
+//.tabs-light .tabs {
+  // border-top: 1px solid $borderColor!important
+//}
+
+/* Header */
+.tabs-light > .tabs > .has-border-right {
+  border-right: 1px solid $borderColor !important;
+}
+
+.tabs-light > .tabs > .logo-text {
+  padding: 3px 6px;
+  color: $brandColor;
+  background-color: #fff;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.tabs-light > .tabs > .header-me {
+  background: url('../img/photo.jpg') center center transparent;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+}
+
+.tabs-light > .tabs > .header-me > .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+}
+
+.tabs-light > .tabs > .header-me > .overlay > img {
+      border-radius: 50%;
+      border: 2px solid #fff;
+      width: 64px;
+      margin-right: 16px;
+      vertical-align: middle;
+}
+
+.tabs-light > .tabs > .header-me > .overlay > h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+}
+
+.tabs-light > .tabs > .header-me > .overlay >  h3 {
+      color: #fff;
+}
+
+.tabs-light > .tabs > .header-me > .overlay > .upper {
+      padding: 16px;
+      border-bottom: 1px solid #888;
+      height: 100px;
+}
+
+.tabs-light > .tabs > .header-me > .overlay > .lower { 
+      height: 80px;
+      padding: 0;
+      margin: 0;
+      
+}
+.tabs-light > .tabs > .header-me > .overlay > .lower > .col:first-child {
+        border-right: 1px solid #888;
+}
+
+.tabs-light > .tabs > .header-me > .bar.has-input {
+  background-color: $brandColor;
+}
+
+.tabs-light > .tabs > .header-me > .has-input .nav-bar-block {
+  display: none;
+}
+
+.tabs-light > .tabs > .header-me > .platform-android .bar-subheader {
+  top: 93px;
+}
+
+/* Post */
+.item-body > .post-body {
+  border-top: none;
+  padding-top: 0;
+}
+.item-body > .post-text {
+  margin-top: 0;
+}
+.post-inline {
+  margin: 5px 0 10px;
+}
+.item-avatar > img.avatar-organization {
+  border-radius: 0;
+  border: 1px solid $borderColor;
+}
+.new-post {
+  width: 100%;
+  padding: 4px;
+}
+
+/* Me */
+.item-me > .row {
+    padding: 0;
+}
+.viewers { 
+  margin-top: 16px;
+}
+.viewers > .avatar { 
+    margin-right: 4px;
+}
+.viewers > .avatar > img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+}
+.skills {
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+/* Messaging */
+.list-messages > .item {
+    padding-right: 8px;
+}
+.list-messages > .row {
+    padding: 0
+}
+
+.bubble-to {
+  margin: 10px 50px 10px 30px;
+}
+.time-to {
+  padding-left: 30px;
+}
+.bubble-from {
+  margin: 10px 10px 10px 80px;
+}
+.bubble-from > .item > p {
+    color: #fff;
+}
+.time-from {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.multiline-ellipsis {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 400px;
+  height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tinder Cards */
+td-cards {
+  display: block;
+  height: 300px;
+}
+
+td-card {
+  position: absolute;
+  left: 50%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: -140px;
+  width: 280px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+td-card > .card-tinder {
+    position: relative;
+    margin: 0;
+    overflow: initial;
+}
+td-card > .list:last-child.card {
+    margin: 0;
+}
+
+.yes-text, .no-text {
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  z-index: 999;
+}
+.yes-text, .no-text > .icon {
+    font-size: 24px
+}
+    
+.yes-text {
+  top: 65px;
+  left: -65px;
+}
+
+.no-text {
+  top: 65px;
+  right: -90px;
+}
+
+.fade {
+  -webkit-transition: 0.2s opacity linear;
+  transition: 0.2s opacity linear;
+  opacity: 0;
+}
+
+/* Network */
+.has-bg {
+  background: url('../img/bg.png') center center transparent;
+  background-size: cover;
+}
+.head-text {
+  background-color: transparent;
+  border: none;
+  padding: 20px 20px 10px;
+  color: #fff;
+}
+ .head-text > h2 {
+    font-size: 20px;
+    color: #fff;
+ }
+
+/* Profile */
+.profile-top {
+  margin-top: 90px;
+  position: relative;
+  overflow: initial;
+}
+.profile-top > .item {
+    padding-top: 90px;
+}
+
+.profile-top > h2 {
+    font-size: 24px;
+}
+.profile-top > .ion-edit {
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+.avatar-profile {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  margin-left: -70px;
+}
+.avatar-stack {
+  position: relative;
+  display: inline-block;
+}
+.avatar-stack > img {
+    position: absolute
+}
+.avatar-stack > img &:nth-child(1) {
+      left: 0px;
+}
+.avatar-stack > img &:nth-child(2) {
+      left: -8px;
+}
+.avatar-stack > img &:nth-child(3) {
+      left: -16px;
+}
+.avatar-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid $borderColor;
+  vertical-align: middle;
+}
+
+.button-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 64px;
+  z-index: 100;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  border-radius: 999em;
+  text-align: center;
+  line-height: 48px;
+}
+.platform-android .button-fab {
+  bottom: 16px;
+}
+
+/* Settings */
+.tabs-secondary {
+  justify-content: space-around;
+}
+
+.tabs-secondary > .tab-item {
+    flex: initial;
+}
+    
+/* Intro */
+.intro-buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slide-intro {
+  height: 100%;
+}
+.slider-pager {
+    font-size: 10px;
+    bottom: 130px;
+}
+.flex-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Fix for Android: no nav-bar*/
+.platform-android .pane[hide-nav-bar="true"] .has-header {
+  top: 93px;
+}
+
+/* Common */
+.box-shadow {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+a {
+  color: $brandColor;
+  font-weight: 700;
+  text-decoration: none;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-muted {
+  color: #777;
+}
+.dot-status {
+  font-size: 10px;
+}
+.text-wrap {
+  white-space: normal !important;
+}
+.b-t {
+  border-top: 1px solid $borderColor !important;
+}
+.font-thin, .item .font-thin {
+  font-weight: 200;
+}
+.b-none {
+  border: none;
+}
+.no-padder {
+  padding: 0!important;
+}
+.row-nopadding {
+  padding: 0;
+}
+
+.card-transparent {
+  background-color: $cardBg;
+}
+.card-transparent > .item {
+    background-color: $cardBg;
+    border: none;
+    color: #fff;
+    margin: 0;
+}
+.card-transparent > .item > h2, p {
+      color: #fff;
+}
+
+.no-bg {
+  background: transparent;
+}
+
+.bg-gradient {
+  background-image: -webkit-gradient(linear, right bottom, left bottom, color-stop(0, #008DC9), color-stop(1, #019DA5));
+  background-image: -o-linear-gradient(left, #019DA5 0%, #008DC9 100%);
+  background-image: -moz-linear-gradient(left, #019DA5 0%, #008DC9 100%);
+  background-image: -webkit-linear-gradient(left, #019DA5 0%, #008DC9 100%);
+  background-image: -ms-linear-gradient(left, #019DA5 0%, #008DC9 100%);
+  background-image: linear-gradient(to left, #019DA5 0%, #008DC9 100%);
+}
+
+.likers .liker {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.sub-footer {
+  bottom:50px !important;
+}
