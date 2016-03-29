@@ -11,12 +11,14 @@
 //@import "../pages/item-details/item-details";
 
 /* Sidemenu */
-.menu-open .menu-content.menu-animated {
-  transform: translate3d(-225px, 0px, 0px) scale(.8) !important;
-  // border-radius: 4px
+//.menu-open > .menu-content > .menu-animated {
+  //.menu-content-reveal > .menu-animated {
+      
+.show-menu + .menu-animated  {
+   transform: translate3d(-225px, 0px, 0px) scale(.8) !important;
 }
 
-.ion-side-menus {
+.ion-menu {
   background: #222629 !important;
 }
 
