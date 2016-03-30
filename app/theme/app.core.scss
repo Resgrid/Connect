@@ -18,30 +18,48 @@
    transform: translate3d(-225px, 0px, 0px) scale(.8) !important;
 }
 
-.ion-menu {
+ion-app {
   background: #222629 !important;
 }
 
-.menu.menu-right {
+ion-menu > ion-content {
+  background-color: transparent;
+  color: #fff;
+}
+
+ion-menu[side=right] {
   background-color: transparent;
   padding: 80px 16px 80px 32px;
   color: #fff;
 }
 
-.menu.menu-right > .item {
+ion-menu[side=right] > ion-content > scroll-content > ion-list > ion-item {
     background-color: transparent;
-    border: none;
+    border: none !important;
 }
 
-.menu.menu-right > .item > h2 {
+ion-menu[side=right] > ion-content > scroll-content > ion-list > ion-item > .item-inner {
+    border: none !important;
+}
+
+ion-menu[side=right] > ion-content > scroll-content > ion-list > ion-item > p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+ion-menu[side=right] > ion-content > scroll-content > ion-list > ion-item > .item-inner > ion-label > h2 {
     color: #fff;
 }
  
-.menu.menu-right > .item > img {
+ion-menu[side=right] > ion-content > scroll-content > ion-list > ion-item > ion-avatar {
+    font-size: 32px;
+    width: 32px;
     border-radius: 0;
+    color: #fff;
 }
 
-.menu.menu-right > .item > h3 {
+ion-menu[side=right] > ion-content > scroll-content > h3 {
     font-weight: 200;
     color: #fff;
 }
@@ -57,11 +75,11 @@
   border-right: 1px solid $borderColor !important;
 }
 
-.tabs-light > .tabs > .logo-text {
-  padding: 3px 6px;
+.logo-text {
+  padding: 10px;
   color: $brandColor;
   background-color: #fff;
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 700;
 }
 

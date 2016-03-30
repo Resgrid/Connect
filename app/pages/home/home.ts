@@ -1,30 +1,17 @@
 import {Page} from "ionic-angular";
+import {FeedPage} from '../feed/feed';
+import {MessagesPage} from '../messages/messages';
+import {MePage} from '../me/me';
+import {SearchPage} from '../search/search';
+import {SettingsPage} from '../settings/settings';
 
 @Page({
   templateUrl: "build/pages/home/home.html"
 })
 export class HomePage {
-    items = [
-        {
-            code: "TD",
-            name: "Test Departmnt",
-            image: "",
-            title: "Title 1",
-            message: "Message 1"
-        },
-        {
-            code: "TD",
-            name: "Test Departmnt",
-            image: "",
-            title: "Title 3",
-            message: "Message 3"
-        },
-        {
-            code: "TD",
-            name: "Test Departmnt",
-            image: "",
-            title: "Title 3",
-            message: "Message 3"
-        }
-    ]
+    tab1Root = FeedPage;
+    tab2Root = MePage;
+    tab3Root = MessagesPage;
+    tab4Root = SearchPage;
+    tab5Root = SettingsPage;
 }

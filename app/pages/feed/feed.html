@@ -1,0 +1,33 @@
+
+<ion-navbar *navbar calm>
+  <ion-title>
+      <span class="logo-text">resgrid</span>
+  </ion-title>
+  <button menuToggle end>
+    <ion-icon name="apps"></ion-icon>
+  </button>
+</ion-navbar>
+
+<ion-content class="stable-bg">
+    <ion-card *ngFor="#item of items" (click)="itemSelected(item)">
+        <ion-card-content>
+            <div class="item item-avatar">
+                <img src="img/adam.jpg">
+                <h2><b>Marty McFly</b></h2>
+                <p>Consultant - Hi-Tech - Executive Sales</p>
+                <p>2 min</p>
+            </div>
+
+            <div class="item item-body post-body" ui-sref="tab.post({id: $index})">
+                <p class="post-text">
+                It's here! Our latest Global Video Index is now available. This quarter we show <a href="">new trends</a> in mobile video consumption, engagement patterns by length of video, how sports publishers can grow viewers around gameday & how programmatic is
+                <span class="seemore">...see more</span>
+                </p>
+            </div>
+
+            <div class="item item-image" ng-if="$index%2 == 0">
+                <img src="img/photo.jpg">
+            </div>    
+        </ion-card-content>
+    </ion-card> 
+</ion-content>
