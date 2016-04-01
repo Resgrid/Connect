@@ -8,26 +8,32 @@
   </button>
 </ion-navbar>
 
-<ion-content class="stable-bg">
+<ion-content class="cards-bg">
     <ion-card *ngFor="#item of items" (click)="itemSelected(item)">
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="img/marty-avatar.png">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>Life Coach</p>
+        </ion-item>
+  
         <ion-card-content>
-            <div class="item item-avatar">
-                <img src="img/adam.jpg">
-                <h2><b>Marty McFly</b></h2>
-                <p>Consultant - Hi-Tech - Executive Sales</p>
-                <p>2 min</p>
-            </div>
-
-            <div class="item item-body post-body" ui-sref="tab.post({id: $index})">
-                <p class="post-text">
-                It's here! Our latest Global Video Index is now available. This quarter we show <a href="">new trends</a> in mobile video consumption, engagement patterns by length of video, how sports publishers can grow viewers around gameday & how programmatic is
-                <span class="seemore">...see more</span>
-                </p>
-            </div>
-
-            <div class="item item-image" ng-if="$index%2 == 0">
-                <img src="img/photo.jpg">
-            </div>    
+            <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
         </ion-card-content>
+        
+        <ion-item>
+            <button primary clear item-left>
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>12 Likes</div>
+            </button>
+            <button primary clear item-left>
+                <ion-icon name="text"></ion-icon>
+                <div>4 Comments</div>
+            </button>
+            <ion-note item-right>
+            11h ago
+            </ion-note>
+        </ion-item>
     </ion-card> 
 </ion-content>

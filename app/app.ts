@@ -1,6 +1,6 @@
 import {App, IonicApp, Platform, MenuController} from "ionic-angular";
 import {HomePage} from "./pages/home/home";
-import {ListPage} from "./pages/list/list";
+import {WelcomePage} from "./pages/welcome/welcome";
 
 
 @App({
@@ -9,7 +9,8 @@ import {ListPage} from "./pages/list/list";
 })
 class ConnectApp {
   // make HomePage the root (or first) page
-  rootPage: any = HomePage;
+  //rootPage: any = HomePage;
+  rootPage: any = WelcomePage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
@@ -21,8 +22,8 @@ class ConnectApp {
 
     // set our app's pages
     this.pages = [
-      { title: "Home", component: HomePage },
-      { title: "My First List", component: ListPage }
+      { title: "Home", component: HomePage }//,
+      //{ title: "My First List", component: ListPage }
     ];
   }
 

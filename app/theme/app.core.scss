@@ -15,7 +15,7 @@
   //.menu-content-reveal > .menu-animated {
       
 .show-menu + .menu-animated  {
-   transform: translate3d(-225px, 0px, 0px) scale(.8) !important;
+   transform: translate3d(-225px, 0px, 0px) scale(.75) !important;
 }
 
 ion-app {
@@ -79,8 +79,9 @@ ion-menu[side=right] > ion-content > scroll-content > h3 {
   padding: 10px;
   color: $brandColor;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 14px;
   font-weight: 700;
+  height:43px;
 }
 
 .tabs-light > .tabs > .header-me {
@@ -187,6 +188,10 @@ ion-menu[side=right] > ion-content > scroll-content > h3 {
 }
 
 /* Messaging */
+.cards-bg {
+    background-color: #f8f8f8;
+}
+
 .list-messages > .item {
     padding-right: 8px;
 }
@@ -378,13 +383,11 @@ td-card > .list:last-child.card {
   bottom: 0;
 }
 
-.slide-intro {
-  height: 100%;
-}
-.slider-pager {
+.welcome-page > ion-content > scroll-content > ion-slides > .swiper-container > .swiper-pagination {
     font-size: 10px;
     bottom: 130px;
 }
+
 .flex-vertical-center {
   display: flex;
   flex-direction: column;
