@@ -1,19 +1,29 @@
 <ion-content class="bg-gradient">
         <ion-slides pager>
             <ion-slide class="text-center flex-vertical-center">
-                <h1 class="calm">Resgrid Connect</h1>
-                <h2 class="font-thin light">Create your awesome profile</h2>
+                <h1 light>Resgrid Connect</h1>
+                <h2>For a More Connected Community</h2>
+                <div class="text-center intro-buttons" padding>
+                    <button (click)="openLogin()" block light outline><b>Join or Sign In</b></button>
+                </div>
             </ion-slide>
-            <ion-slide class="text-center flex-vertical-center">
-                <h2 class="font-thin light">Connect and keep in touch with your network</h2>
+            <ion-slide class="text-center flex-vertical-center" padding>
+                <h2 light>Connect and keep in touch with the departments that serve you</h2>
+                <div class="text-center intro-buttons" padding>
+                    <button (click)="openLogin()" block light outline><b>Join or Sign In</b></button>
+                </div>
             </ion-slide>
-            <ion-slide class="text-center flex-vertical-center">
-                <h2 class="font-thin light">Find jobs through people you know</h2>
+            <ion-slide class="text-center flex-vertical-center" padding>
+                <h2 light>From fire departments and public safety to emergnecy response and services, we've got you covered</h2>
+                <div class="text-center intro-buttons" padding>
+                    <button (click)="openLogin()" block light outline><b>Join or Sign In</b></button>
+                </div>
+            </ion-slide>
+            <ion-slide class="text-center flex-vertical-center" padding>
+                <h2 light>Find opportunites to volunteer and help out and community directly with departments</h2>
+                <div class="text-center intro-buttons" padding>
+                    <button (click)="openLogin()" block light outline><b>Join or Sign In</b></button>
+                </div>
             </ion-slide>
         </ion-slides>
-        
-        <div class="text-center padding intro-buttons" padding>
-            <button ng-click="openRegister()" block><b>Join now</b></button>
-            <button ng-click="openLogin()" block dark outline><b>Sign in</b></button>
-        </div>
 </ion-content>
