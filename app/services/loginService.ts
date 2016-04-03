@@ -1,5 +1,5 @@
 import {Injectable, Inject} from "angular2/core";
-import {Storage, LocalStorage, Events} from "ionic-angular";
+import {Storage, LocalStorage, Events, Platform} from "ionic-angular";
 import {Consts} from "../consts";
 
 @Injectable()
@@ -8,11 +8,16 @@ export class LoginService  {
     userid: string;
     loggedIn: boolean = false;
 
-    constructor(private events: Events, private consts: Consts) { }
+    constructor(private events: Events, private consts: Consts, private platform: Platform) { }
 
     login(provider: string) {
-        this.client = new WindowsAzure.MobileServiceClient(this.consts.ServiceUrl);
-        this.client.login(provider).done(this.loginResponse.bind(this));
+        
+        platform.is("cordova") {
+            this.client = new WindowsAzure.MobileServiceClient(this.consts.ServiceUrl);
+            this.client.login(provider).done(this.loginResponse.bind(this));
+        } else {
+            
+        }
     }
 
     loginResponse(response: WindowsAzure.User) {

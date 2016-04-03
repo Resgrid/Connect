@@ -1,4 +1,4 @@
-declare module WindowsAzure {
+declare namespace WindowsAzure {
     interface MobileServiceClient {
         new (applicationUrl: string): MobileServiceClient;
         getTable(tableName: string): MobileServiceTable;
@@ -71,10 +71,8 @@ declare module WindowsAzure {
     }
 }
 
-
 declare module "WindowsAzure" {
     export = WindowsAzure;
 }
-
 
 declare var WindowsAzure: WindowsAzure.WindowsAzureStatic;
