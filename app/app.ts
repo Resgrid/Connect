@@ -1,9 +1,19 @@
-import {App, IonicApp, Platform, MenuController} from "ionic-angular";
+import "zone.js";
+import "reflect-metadata";
+import "es6-shim/es6-shim.min";
+
+import {App, IonicApp, Platform, Events, MenuController} from "ionic-angular";
 import {HomePage} from "./pages/home/home";
 import {WelcomePage} from "./pages/welcome/welcome";
 
+// Providers
+import {Consts} from "./consts";
+import {LoginService} from "./providers/loginservice";
+
 @App({
+  prodMode: false,
   templateUrl: "build/app.html",
+  providers: [Consts, LoginService],
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 class ConnectApp {

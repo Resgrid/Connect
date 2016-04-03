@@ -2,12 +2,9 @@ import {Injectable} from "angular2/core";
 
 @Injectable()
 export class Consts {
-    public ServiceUrl: string;
+    // Project Constants
+    public ServiceUrl: string = "http://rgconnect.azurewebsites.net";
 
     // Events
     public Events_UserLoggedIn: string = "user:login";
-
-    constructor() {
-        this.ServiceUrl = "http://rgconnect.azurewebsites.net";
-    }
 }

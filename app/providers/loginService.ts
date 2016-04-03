@@ -11,12 +11,12 @@ export class LoginService  {
     constructor(private events: Events, private consts: Consts, private platform: Platform) { }
 
     login(provider: string) {
-        
-        platform.is("cordova") {
+
+        if (this.platform.is("cordova")) {
             this.client = new WindowsAzure.MobileServiceClient(this.consts.ServiceUrl);
             this.client.login(provider).done(this.loginResponse.bind(this));
         } else {
-            
+
         }
     }
 

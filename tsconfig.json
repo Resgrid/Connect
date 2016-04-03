@@ -6,10 +6,6 @@
     "experimentalDecorators": true,
     "noImplicitAny": false
   },
-  "filesGlob": [
-    "**/*.ts",
-    "!node_modules/**/*"
-  ],
   "exclude": [
     "node_modules",
     "typings/main",
