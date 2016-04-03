@@ -24,7 +24,9 @@
   "name": "connect",
   "description": "Connect is a mobile appplication to connect members of the public with first responders or relief entities in their area",
   "version": "1.0.0",
-  "cordovaPlugins": [],
+  "cordovaPlugins": [
+    "cordova-plugin-ms-azure-mobile-apps"
+  ],
   "cordovaPlatforms": [
     "ios",
     "android"

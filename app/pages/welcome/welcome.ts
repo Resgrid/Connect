@@ -5,10 +5,10 @@ import {LoginPage} from "../login/login";
   templateUrl: "build/pages/welcome/welcome.html"
 })
 export class WelcomePage {
-    constructor(public nav: NavController){
+    constructor(private nav: NavController) {
         this.nav = nav;
     }
-    
+
     openLogin() {
         this.nav.push(LoginPage);
     }
