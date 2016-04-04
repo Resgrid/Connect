@@ -6,18 +6,19 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:* ws://localhost:* http://api.resgrid.com https://github.com https://api.resgrid.com https://d37gvrvc0wt4s1.cloudfront.net https://maps.googleapis.com https://maps.gstatic.com https://csi.gstatic.com https://cdn.mxpnl.com https://secure.gravatar.com http://maps.googleapis.com https://mts.googleapis.com https://mts1.googleapis.com https://mts0.googleapis.com https://fonts.gstatic.com https://resgridapi.local https://api.resgrid.com http://www.google-analytics.com http://ajax.cloudflare.com https://ssl.google-analytics.com https://ajax.cloudflare.com http://resgridapi.azurewebsites.net 'unsafe-inline' data: https://api.rollbar.com https://api.resgrid.com http://resgridapi.local https://resgridapi.local http://api.mixpanel.com https://api.mixpanel.com gap: https://ssl.gstatic.com 'unsafe-eval'; style-src https://fonts.googleapis.com https://fonts.gstatic.com https://resgrid.com http://api.resgrid.com https://api.resgrid.com https://resgridapi.local 'self' 'unsafe-inline'; media-src *">
+  <meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; http://localhost:* ws://localhost:* http://api.resgrid.com https://github.com https://api.resgrid.com https://d37gvrvc0wt4s1.cloudfront.net https://maps.googleapis.com https://maps.gstatic.com https://csi.gstatic.com https://cdn.mxpnl.com https://secure.gravatar.com http://maps.googleapis.com https://mts.googleapis.com https://mts1.googleapis.com https://mts0.googleapis.com https://fonts.gstatic.com https://resgridapi.local https://api.resgrid.com http://www.google-analytics.com http://ajax.cloudflare.com https://ssl.google-analytics.com https://ajax.cloudflare.com http://resgridapi.azurewebsites.net &apos;unsafe-inline&apos; data: https://api.rollbar.com https://api.resgrid.com http://resgridapi.local https://resgridapi.local http://api.mixpanel.com https://api.mixpanel.com gap: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src https://fonts.googleapis.com https://fonts.gstatic.com https://resgrid.com http://api.resgrid.com https://api.resgrid.com https://resgridapi.local &apos;self&apos; &apos;unsafe-inline&apos;; media-src *">
   
   <link ios-href="build/css/app.ios.css" rel="stylesheet">
   <link md-href="build/css/app.md.css" rel="stylesheet">
+  <link wp-href="build/css/app.wp.css" rel="stylesheet">
 </head>
 <body>
   <ion-app></ion-app>
-  <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
   <script src="cordova.js"></script>
-  <!--<script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>-->
-  <script src="build/js/app.js"></script>
-  
+  <!-- Zone.js and Reflect-metadata  -->
+  <script src="build/js/angular2-polyfills.js"></script>
+  <!-- the bundle which is built from the app's source code -->
+  <script src="build/js/app.bundle.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
 </body>
 </html>
