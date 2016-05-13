@@ -7,11 +7,12 @@ import {WelcomePage} from "./pages/welcome/welcome";
 // Providers
 import {Consts} from "./consts";
 import {LoginService} from "./providers/loginservice";
+import {UserDataService} from "./providers/userDataService";
 
 @App({
   prodMode: false,
   templateUrl: "build/app.html",
-  providers: [Consts, LoginService],
+  providers: [Consts, LoginService, UserDataService],
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 class ConnectApp {

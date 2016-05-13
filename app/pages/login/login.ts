@@ -7,7 +7,7 @@ import {HomePage} from "../home/home";
   templateUrl: "build/pages/login/login.html"
 })
 export class LoginPage {
-    userName: string;
+    email: string;
     password: string;
 
     constructor(private events: Events, private nav: NavController, private consts: Consts, private loginService: LoginService) {

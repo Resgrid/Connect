@@ -11,7 +11,6 @@ export class DataService {
       this.http = http;
    }
 
-
    getDepartments(location:string) {
       let path = "/api/public/listDepartments";
       return this.http.get(path);
