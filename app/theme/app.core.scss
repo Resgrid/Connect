@@ -16,7 +16,7 @@
 //.menu-open > .menu-content > .menu-animated {
   //.menu-content-reveal > .menu-animated {
       
-.show-menu + .menu-animated  {
+/*.show-menu +*/ .menu-content-open/* .menu-animated */ {
    transform: translate3d(-225px, 0px, 0px) scale(.75) !important;
 }
 
@@ -27,6 +27,7 @@ ion-app {
 ion-menu > ion-content {
   background-color: transparent;
   color: #fff;
+  margin-left: 14px;
 }
 
 ion-menu[side=right] {
@@ -48,6 +49,10 @@ ion-menu[side=right] > ion-content > scroll-content > ion-list > ion-item > p {
     color: #666;
     font-size: 14px;
     margin-bottom: 2px;
+}
+
+ion-menu[side=right] > ion-content > scroll-content > ion-list > ion-item > .item-inner > .input-wrapper > ion-label > h2 {
+    color: #999;
 }
 
 ion-menu[side=right] > ion-content > scroll-content > ion-list > ion-item > .item-inner > ion-label > h2 {

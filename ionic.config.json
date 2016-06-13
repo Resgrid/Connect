@@ -1,4 +1,6 @@
 {
   "name": "Resgrid Connect",
-  "app_id": "7ca748e3"
+  "app_id": "7ca748e3",
+  "typescript": true,
+  "v2": true
 }

@@ -1,6 +1,7 @@
-import "es6-shim";
-import {App, IonicApp, Platform, Events, MenuController} from "ionic-angular";
-import {StatusBar} from "ionic-native";
+
+import {Component} from '@angular/core';
+import {Platform, ionicBootstrap, Events, MenuController} from 'ionic-angular';
+import {StatusBar} from 'ionic-native';
 import {HomePage} from "./pages/home/home";
 import {WelcomePage} from "./pages/welcome/welcome";
 
@@ -9,11 +10,11 @@ import {Consts} from "./consts";
 import {LoginService} from "./providers/loginservice";
 import {UserDataService} from "./providers/userDataService";
 
-@App({
-  prodMode: false,
+@Component({
+  //prodMode: false,
   templateUrl: "build/app.html",
   providers: [Consts, LoginService, UserDataService],
-  config: {} // http://ionicframework.com/docs/v2/api/config/Config/
+  //config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 class ConnectApp {
   // make HomePage the root (or first) page
@@ -21,7 +22,6 @@ class ConnectApp {
   // pages: Array<{title: string, component: any}>;
 
   constructor(
-    private app: IonicApp,
     private platform: Platform,
     private menu: MenuController
   ) {
@@ -36,9 +36,9 @@ class ConnectApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      // StatusBar.styleDefault();
+      StatusBar.styleDefault();
     });
   }
 }
+
+ionicBootstrap(ConnectApp, [Consts, LoginService, UserDataService])

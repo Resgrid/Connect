@@ -1,7 +1,7 @@
 
 <ion-navbar *navbar calm>
   <ion-title>
-      <span class="logo-text">resgrid</span>
+      Resgrid Connect
   </ion-title>
   <button menuToggle end>
     <ion-icon name="apps"></ion-icon>
@@ -9,7 +9,7 @@
 </ion-navbar>
 
 <ion-content class="cards-bg">
-    <ion-card *ngFor="#item of items" (click)="itemSelected(item)">
+    <ion-card *ngFor="let item of items" (click)="itemSelected(item)">
         <ion-item>
             <ion-avatar item-left>
                 <img src="img/marty-avatar.png">
