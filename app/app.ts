@@ -1,5 +1,5 @@
 
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {Platform, ionicBootstrap, Events, MenuController} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from "./pages/home/home";
@@ -14,6 +14,9 @@ import {UserDataService} from "./providers/userDataService";
   //prodMode: false,
   templateUrl: "build/app.html",
   providers: [Consts, LoginService, UserDataService],
+  queries: {
+    nav: new ViewChild('content')
+  }
   //config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 class ConnectApp {
