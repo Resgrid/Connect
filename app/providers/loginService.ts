@@ -1,4 +1,4 @@
-import {Injectable, Inject} from "angular2/core";
+import {Injectable, Inject} from "@angular/core";
 import {Storage, LocalStorage, Events, Platform} from "ionic-angular";
 import {Consts} from "../consts";
 import {UserDataService} from "./userDataService";

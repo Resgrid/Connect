@@ -1,13 +1,13 @@
-
-<ion-navbar *navbar calm>
-  <ion-title>
-      Resgrid Connect
-  </ion-title>
-  <button menuToggle end>
-    <ion-icon name="apps"></ion-icon>
-  </button>
-</ion-navbar>
-
+<ion-header>
+    <ion-navbar calm>
+        <ion-title>
+            Resgrid Connect
+        </ion-title>
+        <button menuToggle end>
+            <ion-icon name="apps"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
 <ion-content class="cards-bg">
     <ion-card *ngFor="let item of items" (click)="itemSelected(item)">
         <ion-item>

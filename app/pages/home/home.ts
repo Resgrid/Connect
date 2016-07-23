@@ -9,9 +9,9 @@ import {SettingsPage} from '../settings/settings';
   templateUrl: "build/pages/home/home.html"
 })
 export class HomePage {
-    tab1Root = FeedPage;
-    tab2Root = MePage;
-    tab3Root = MessagesPage;
-    tab4Root = SearchPage;
-    tab5Root = SettingsPage;
+    public tab1Root = FeedPage;
+    public tab2Root = MePage;
+    public tab3Root = MessagesPage;
+    public tab4Root = SearchPage;
+    public tab5Root = SettingsPage;
 }

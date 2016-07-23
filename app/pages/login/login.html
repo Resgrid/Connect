@@ -1,32 +1,12 @@
 <ion-content class="bg-gradient" padding>
+    <p>
+        Resgrid 
+    </p>
     <div class="authImageStyling">
         <img src="img/facebook.png" (click)="socialLogin('facebook')" />
         <img src="img/twitter.png"  (click)="socialLogin('twitter')" />
         <img src="img/googleplus.png" (click)="socialLogin('google')" />
     </div>
     
-    <h4 text-center light>- OR -</h4>
-    
-    <ion-list>
-        <ion-item>
-            <ion-label>Email</ion-label>
-            <ion-input type="email" [(ngModel)]="email" focus-me></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Password</ion-label>
-            <ion-input type="password" [(ngModel)]="password"></ion-input>
-        </ion-item>
-    </ion-list>
-    
-    <button (click)="login()" block light outline><b>Sign in</b></button>
-
-    <ion-row>
-      <ion-col>
-        <a (click)="forgotLogin()" light>Forgot Login</a>
-      </ion-col>
-      <ion-col class="text-right">
-        <a (click)="signUp()" light>Join Now</a>
-      </ion-col>
-   </ion-row>
+    <button (click)="login()" block light outline><b>Skip</b></button>
 </ion-content>

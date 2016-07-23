@@ -4,9 +4,9 @@ import {Consts} from "../../consts";
 import {HomePage} from "../home/home";
 
 @Page({
-  templateUrl: "build/pages/login/login.html",
+  templateUrl: "build/pages/organizations/organizations.html",
 })
-export class LoginPage {
+export class OrganizationsPage {
     constructor(private events: Events, private nav: NavController, private consts: Consts, private loginService: LoginService) {
         events.subscribe(consts.Events_UserLoggedIn, (user) => {
             nav.push(HomePage);

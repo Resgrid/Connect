@@ -9,12 +9,12 @@
     "ban": false,
     "class-name": true,
     "comment-format": [
-      true,
+      false,
       "check-space",
       "check-lowercase"
     ],
     "curly": true,
-    "eofline": true,
+    "eofline": false,
     "forin": true,
     "indent": [
       true,
@@ -50,7 +50,7 @@
       "trace"
     ],
     "no-construct": true,
-    "no-constructor-vars": true,
+    "no-constructor-vars": false,
     "no-debugger": true,
     "no-duplicate-key": true,
     "no-duplicate-variable": true,
@@ -70,7 +70,7 @@
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-var-requires": true,
-    "object-literal-sort-keys": true,
+    "object-literal-sort-keys": false, // Useful to prevent merge conflicts becuase your probalby not all adding at the end of the array
     "one-line": [
       true,
       "check-open-brace",

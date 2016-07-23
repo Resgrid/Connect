@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.resgrid.connect" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Resgrid Connect</name>
-  <description>Resgrid application to connect people with their EMS, Fire, Public Safety, SAR, CERT or Disaster Releif entity.</description>
+  <description>Connect is a private social network to connect people with their EMS, Fire, Public Safety, SAR, CERT or Disaster Releif entity.</description>
   <author email="team@resgrid.com" href="https://resgrid.com/">Resgrid Team</author>
   <content src="index.html"/>
   <access origin="*"/>

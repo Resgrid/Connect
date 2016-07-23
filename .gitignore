@@ -42,4 +42,5 @@ app/**/*.js.map
 
 *.ipa
 *.apk
-/.io-config.json
+.io-config.json
+ionic.config.json

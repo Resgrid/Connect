@@ -1,9 +1,12 @@
 
-import {Component, ViewChild} from '@angular/core';
-import {Platform, ionicBootstrap, Events, MenuController} from 'ionic-angular';
-import {StatusBar} from 'ionic-native';
+import {Component, ViewChild} from "@angular/core";
+import {Platform, ionicBootstrap, Events, MenuController, Nav} from "ionic-angular";
+import {StatusBar} from "ionic-native";
+
+// Pages
 import {HomePage} from "./pages/home/home";
 import {WelcomePage} from "./pages/welcome/welcome";
+import {OrganizationsPage} from "./pages/organizations/organizations";
 
 // Providers
 import {Consts} from "./consts";
@@ -14,15 +17,15 @@ import {UserDataService} from "./providers/userDataService";
   //prodMode: false,
   templateUrl: "build/app.html",
   providers: [Consts, LoginService, UserDataService],
-  queries: {
-    nav: new ViewChild('content')
-  }
+  //queries: {
+  //  nav: new ViewChild('content')
+  //}
   //config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 class ConnectApp {
-  // make HomePage the root (or first) page
-  rootPage: any = WelcomePage;
-  // pages: Array<{title: string, component: any}>;
+  @ViewChild(Nav) nav: Nav;
+  public rootPage: any = WelcomePage;
+  public menuItems: Array<{title: string, description: string, icon: string, component: any}>;
 
   constructor(
     private platform: Platform,
@@ -30,18 +33,27 @@ class ConnectApp {
   ) {
     this.initializeApp();
 
-    // set our app's pages
-    // this.pages = [
-    //  { title: "Home", component: HomePage }// ,
-      // { title: "My First List", component: ListPage }
-    // ];
+    this.menuItems = [
+      { title: "Organizations", description: "Find organizations to follow", icon: "compass", component: OrganizationsPage },
+      { title: "Opportunities", description: "See what volunteer options there are", icon: "disc", component: OrganizationsPage },
+      { title: "Alerts", description: "View alerts received", icon: "pulse", component: OrganizationsPage },
+      { title: "Profile", description: "View and edit your profile", icon: "contact", component: OrganizationsPage },
+      { title: "About", description: "About resgrid connect", icon: "information-circle", component: OrganizationsPage },
+    ];
   }
 
-  initializeApp() {
+  public initializeApp(): void {
     this.platform.ready().then(() => {
       StatusBar.styleDefault();
     });
   }
+
+  public openPage(page: any): void {
+    // close the menu when clicking a link from the menu
+    this.menu.close();
+    // navigate to the new page if it is not the current page
+    this.nav.setRoot(page.component);
+  }
 }
 
-ionicBootstrap(ConnectApp, [Consts, LoginService, UserDataService])
+ionicBootstrap(ConnectApp, [Consts, LoginService, UserDataService]);

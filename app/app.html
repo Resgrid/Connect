@@ -3,48 +3,15 @@
     <h3>Resgrid Connect</h3>
     <p></p>
     <ion-list>
-        <ion-item>
+        <ion-item *ngFor="let p of menuItems" (click)="openPage(p)">
             <ion-avatar item-left>
-                 <ion-icon name="compass" item-left></ion-icon>
+                 <ion-icon name="{{p.icon}}" item-left></ion-icon>
             </ion-avatar>
-            <h2>Organizations</h2>
-            <p>Find departmnets to follow</p>
+            <h2>{{p.title}}</h2>
+            <p>{{p.description}}</p>
         </ion-item>
-        
-        <ion-item>
-            <ion-avatar item-left>
-                 <ion-icon name="disc" item-left></ion-icon>
-            </ion-avatar>
-            <h2>Opportunities</h2>
-            <p>Connect with departments</p>
-        </ion-item>
-         
-        <ion-item>
-            <ion-avatar item-left>
-                 <ion-icon name="pulse" item-left></ion-icon>
-            </ion-avatar>
-            <h2>Alerts</h2>
-            <p>View current alerts</p>
-        </ion-item>
-        
-        <ion-item>
-            <ion-avatar item-left>
-                 <ion-icon name="contact" item-left></ion-icon>
-            </ion-avatar>
-            <h2>Profile</h2>
-            <p>Your profile</p>
-        </ion-item>
-        
-        <ion-item>
-            <ion-avatar item-left>
-                 <ion-icon name="information-circle" item-left></ion-icon>
-            </ion-avatar>
-            <h2>About</h2>
-            <p>About Resgrid Connect</p>
-        </ion-item>      
     </ion-list>
   </ion-content>
-
 </ion-menu>
 
 <!--
