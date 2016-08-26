@@ -1,0 +1,38 @@
+.organization {
+  .organization-top {
+    height: 30%;
+    padding-top: 5%;
+
+    &>span {
+      font-size: 1.2em;
+    }
+  }
+
+  .organization-info {
+    padding-top: $organizationProfilePictureSize / 2 + 20px;
+    height: 70%;
+
+    .organization-picture {
+      position: absolute;
+      top: - $organizationProfilePictureSize / 2;
+      width: 100%;
+      text-align: center;
+
+      &>img {
+        width: $organizationProfilePictureSize;
+        height: $organizationProfilePictureSize;
+      }
+    }
+
+    .organization-plate {
+      margin-top: 40px;
+    }
+
+    .button {
+      position: absolute;
+      bottom: 16px;
+      width: 90%;
+      margin-left: 5%;
+    }
+  }
+}

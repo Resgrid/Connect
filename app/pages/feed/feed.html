@@ -9,7 +9,7 @@
     </ion-navbar>
 </ion-header>
 <ion-content class="cards-bg">
-    <ion-card *ngFor="let item of items" (click)="itemSelected(item)">
+    <ion-card *ngFor="let item of items" (click)="itemSelected(item)" *ngIf="followsDepartments">
         <ion-item>
             <ion-avatar item-left>
                 <img src="img/marty-avatar.png">
@@ -35,5 +35,18 @@
             11h ago
             </ion-note>
         </ion-item>
-    </ion-card> 
+    </ion-card>
+    <div class="empty-block" *ngIf="!followsDepartments">
+        <div class="empty-block-title">
+            Yikes, nothing to show!
+        </div>
+        <div class="empty-block-text">
+            Looks like your not following any organizations, you can click the button below to find one to follow
+        </div>
+        <div class="buttons">
+        <button block class="button button-positive view-button-blue" (click)="goToOrganizations()">
+            <span>FIND ORGANIZATIONS</span>
+        </button>
+        </div>
+    </div>
 </ion-content>

@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-navbar calm>
+        <ion-title>
+            {{profile.ShortName}}
+        </ion-title>
+         <ion-buttons end>
+          <button danger *ngIf="!profile.Following">
+            Unfollow
+          </button>
+          <button secondary *ngIf="profile.Following">
+            Follow
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="organization">
+  <div class="organization-top dark-bg light" text-center>
+    <h1>{{profile.Name}}</h1>
+  </div>
+
+  <div class="organization-info rlt" text-center>
+    <div class="organization-picture" padding-bottom>
+    <img class="circle" [src]="generateDepartmentImageUrl(profile.Did)" [fallbacksrc]="'img/defaultDepartment.png'" >
+  </div>
+
+    <div no-margin>{{profile.Description}}</div>
+    <br/>
+
+    <div no-margin *ngIf="profile.InCaseOfEmergency">In case of emergency</div>
+    <h3 no-margin primary *ngIf="profile.InCaseOfEmergency">{{ profile.InCaseOfEmergency }}</h3>
+
+    <ion-grid class="organization-plate">
+      <ion-row>
+        <ion-col>
+          <div class="text-hint">Founded</div>
+          <strong margin-top>{{profile.Founded}}</strong>
+        </ion-col>
+        <ion-col>
+          <div class="text-hint">Services</div>
+          <strong margin-top>{{profile.ServicesProvided}}</strong>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="text-hint">Service Area</div>
+          <strong margin-top>{{profile.ServiceArea}}</strong>
+        </ion-col>
+        <ion-col>
+          <div class="text-hint">Phone Number</div>
+          <tel margin-top>{{profile.PhoneNumber}}</tel>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="organization-plate" *ngIf="profile.VolunteerPositionsAvailable">
+      <ion-row>
+        <ion-col>
+          <h3 class="text-hint" primary>Volunteer Opportunities</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="text-hint" primary>{{profile.VolunteerDescription}}</div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="text-hint">Contact Name</div>
+          <strong margin-top>{{profile.VolunteerContactName}}</strong>
+        </ion-col>
+        <ion-col>
+          <div class="text-hint">Contact Info</div>
+          <strong margin-top>{{profile.VolunteerContactInfo}}</strong>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

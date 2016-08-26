@@ -1,30 +1,19 @@
-import {Page} from "ionic-angular";
+import {Page, NavController, ViewController} from "ionic-angular";
+import {OrganizationsPage} from "../organizations/organizations";
 
 @Page({
   templateUrl: "build/pages/feed/feed.html",
 })
 export class FeedPage {
-   public items: any = [
-        {
-            code: "TD",
-            name: "Test Departmnt",
-            image: "",
-            title: "Title 1",
-            message: "Message 1",
-        },
-        {
-            code: "TD",
-            name: "Test Departmnt",
-            image: "",
-            title: "Title 3",
-            message: "Message 3",
-        },
-        {
-            code: "TD",
-            name: "Test Departmnt",
-            image: "",
-            title: "Title 3",
-            message: "Message 3",
-        }
-    ];
+    public followsDepartments: Boolean;
+    public items: any[];
+
+    constructor(private nav: NavController, private viewCtrl: ViewController) {
+        this.followsDepartments = false;
+     }
+
+     public goToOrganizations(): void {
+         //this.nav.push(OrganizationsPage);
+         this.nav.setRoot(OrganizationsPage);
+     }
 }

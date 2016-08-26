@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar calm>
+        <ion-title>
+            Follow Orginizations
+        </ion-title>
+        <button menuToggle end>
+            <ion-icon name="apps"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+<ion-content class="cards-bg">
+    <div class="loading-spinner" *ngIf="loading">
+        <ion-spinner name="circles"></ion-spinner>
+	    <div class="loading-text">Loading...</div>
+	</div>
+    <div *ngIf="!loading">
+        <ion-card *ngFor="let department of departments" (click)="departmentSelected(department)">
+            <ion-item>
+                <ion-avatar item-left>
+                    <img [src]="generateDepartmentImageUrl(department.Did)" [fallbacksrc]="'img/defaultDepartment.png'" >
+                </ion-avatar>
+                <h2>{{department.ShortName}}</h2>
+                <p>{{department.Name}}</p>
+            </ion-item>
+    
+            <ion-card-content>
+                <p>{{department.Description}}</p>
+            </ion-card-content>
+            
+            <ion-item>
+                <ion-note item-left>
+                {{department.ServicesProvided}}
+                </ion-note>
+                <ion-note item-right>
+                {{department.ServiceArea}}
+                </ion-note>
+            </ion-item>
+        </ion-card>
+    </div>
+</ion-content>
